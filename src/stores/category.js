@@ -8,7 +8,6 @@ const categoryList = ref([])
 const getCategory = async () => {
 const res = await getCategoryApi()
  categoryList.value = res.result
- console.log(res);
 }
 return {categoryList,getCategory}
   }
