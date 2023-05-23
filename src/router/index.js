@@ -9,7 +9,7 @@ const router = createRouter({
   routes: [
     {path:'/',component:Layout,children:[
       {path:'',component:Home},
-      {path:'category',component:Category},
+      {path:'category/:id',component:Category},
     ]},
     {path:'/login',component:Login}
   ]
