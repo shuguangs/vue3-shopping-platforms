@@ -1,12 +1,9 @@
 <script setup>
-
 import GoodsItem from '../home/components/GoodsItem.vue';
 import { useBanner } from '@/views/category/conposables/useBanner.js'
 import { useCategory } from './conposables/useCategory.js'
 //获取分类数据
-
 const { categoryData } = useCategory()
-
 //获取banner数据
 const{ BannerList } = useBanner()
 </script>
@@ -32,7 +29,7 @@ const{ BannerList } = useBanner()
   <h3>全部分类</h3>
   <ul>
     <li v-for="i in categoryData.children" :key="i.id">
-      <RouterLink to="/">
+      <RouterLink :to="`/category/sub/${i.id}`">
         <img :src="i.picture" />
         <p>{{ i.name }}</p>
       </RouterLink>
