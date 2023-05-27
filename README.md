@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+黑马平台项目，后端接口来自黑马提供
+技术栈：vue3 + vue-router + pinia + elementplus + axios + vite + vueuse
 # vue3-shopping-platforms
 小兔鲜儿项目
 =======
