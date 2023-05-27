@@ -21,7 +21,7 @@ httpInstance.interceptors.request.use(config => {
   return config
 }, e => Promise.reject(e))
 
-// axios响应式拦截器
+// axios响应拦截器
 httpInstance.interceptors.response.use(res => res.data, e => {
   //统一错误提示
   ElMessage({
@@ -31,7 +31,9 @@ httpInstance.interceptors.response.use(res => res.data, e => {
   //401处理
   const userStore = useUserStore()
   if(e.response.status === 401){
+    //清除数据
     userStore.clearUser()
+    //跳转到login页面
     router.push('/login')
   }
   return Promise.reject(e)
