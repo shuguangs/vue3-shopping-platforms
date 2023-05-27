@@ -27,7 +27,7 @@ const Skuchange = (sku) =>{
 
 const count = ref(1)
 const countChange = (count) =>{
-
+console.log(count);
 }
 
 const cartStore = useCartStore()
